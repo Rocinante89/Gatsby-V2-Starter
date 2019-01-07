@@ -18,7 +18,7 @@ module.exports = {
     // Parse all images files
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
 
     // Add typescript stack into webpack
     `gatsby-plugin-typescript`,
