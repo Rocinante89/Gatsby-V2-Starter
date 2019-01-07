@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    // Replace with actual url
+    siteUrl: `https://www.example.com`,
+    title: `Gatsby Default Starter`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,6 +18,7 @@ module.exports = {
     // Parse all images files
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`
 
     // Add typescript stack into webpack
     `gatsby-plugin-typescript`,
