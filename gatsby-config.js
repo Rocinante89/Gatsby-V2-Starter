@@ -13,8 +13,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // Parse all images files
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
+    // Add typescript stack into webpack
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
