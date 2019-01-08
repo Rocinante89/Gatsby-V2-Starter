@@ -25,7 +25,8 @@
     "husky": "1.3.1",
     "lint-staged": "8.1.0",
     "prettier": "1.15.3",
-    "ts-lint": "4.5.1"
+    "ts-lint": "4.5.1",
+    "xo": "0.23.0"
   },
   "keywords": [
     "gatsby"
@@ -37,6 +38,7 @@
     "start": "npm run develop",
     "lint": "npm run lint:ts && npm run lint:md && npm run lint:js && npm run lint:css",
     "lint:ts": "tslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
+    "lint:js": "xo",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
@@ -47,17 +49,29 @@
       "...": "..."
     }
   },
+  "xo": {
+    "extends": "xo-react/space",
+    "space": true,
+    "rules": {
+      "no-case-declarations": 0,
+      "default-case": 0
+    }
+  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "tslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "xo --fix",
       "git add"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Rocinante89/Gatsby-V2-Starter"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Rocinante89/Gatsby-V2-Starter/issues"
   }
 }
