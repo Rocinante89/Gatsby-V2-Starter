@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "10.15.0"
+os:
+  - linux
+sudo: false
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+  code_climate:
+    repo_token: bea80a3a411611d6da4e3856173ea3ecd2c2dc1b22e14dabe3668322a16da195
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=g++-4.8; fi
+after_script: 
+  - npm run codeclimate
