@@ -1,62 +1,41 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Gatsby Starter
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<!-- [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) -->
+[![Build Status](https://travis-ci.org/Rocinante89/Gatsby-V2-Starter.svg?branch=master)](https://travis-ci.org/Rocinante89/Gatsby-V2-Starter)
+[![Build status](https://ci.appveyor.com/api/projects/status/94vtkad6x4h52irv?svg=true)](https://ci.appveyor.com/project/Rocinante89/Gatsby-V2-Starter/branch/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/157a4c68de3e851a53f1/maintainability)](https://codeclimate.com/github/Rocinante89/Gatsby-V2-Starter/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/157a4c68de3e851a53f1/test_coverage)](https://codeclimate.com/github/Rocinante89/Gatsby-V2-Starter/test_coverage)
+
+This starter ships with everything you need to set up a maintainable dev environment.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-## 🚀 Quick start
-
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
-
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+-   [ ] Gatsby 2.0
+    -   [ ] sharp
+    -   [x] offline support
+    -   [ ] google analytics
+    -   [x] manifest
+    -   [x] typescript
+    -   [ ] contentful
+-   [x] Best practices tools
+    -   [x] [Jest](https://facebook.github.io/jest/) / [Enzyme](http://airbnb.io/enzyme/)
+    -   [x] [Typescript](https://www.typescriptlang.org/) / [tslint](https://palantir.github.io/tslint/)
+    -   [x] [xo linter](https://github.com/sindresorhus/xo)
+    -   [x] [Husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged) for autofix each commit
+    -   [x] Travis/AppVeyor config (unix-osx-windows CI)
+    -   [x] Code climate config
+-   [x] SEO
+    -   [x] [Helmet](https://github.com/nfl/react-helmet)
+-   [] [Bulma](https://bulma.io/) for styling
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
@@ -92,6 +71,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Rocinante89/Gatsby-V2-Starter)
