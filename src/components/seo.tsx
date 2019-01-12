@@ -3,20 +3,20 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 
 interface SEOProps {
-  description?: string,
-  lang?: string,
-  meta?: [],
-  keywords?: string[],
-  title: string,
+  description?: string;
+  lang?: string;
+  meta?: [];
+  keywords?: string[];
+  title: string;
 }
 
 function SEO({ description, lang, meta, keywords, title }: SEOProps) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         const metaDescription =
-          description || data.site.siteMetadata.description
+          description || data.site.siteMetadata.description;
         return (
           <Helmet
             htmlAttributes={{
@@ -26,61 +26,61 @@ function SEO({ description, lang, meta, keywords, title }: SEOProps) {
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
-                name: `description`,
                 content: metaDescription,
+                name: 'description',
               },
               {
-                property: `og:title`,
                 content: title,
+                property: 'og:title',
               },
               {
-                property: `og:description`,
                 content: metaDescription,
+                property: 'og:description',
               },
               {
-                property: `og:type`,
-                content: `website`,
+                content: 'website',
+                property: 'og:type',
               },
               {
-                name: `twitter:card`,
-                content: `summary`,
+                content: 'summary',
+                name: 'twitter:card',
               },
               {
-                name: `twitter:creator`,
                 content: data.site.siteMetadata.author,
+                name: 'twitter:creator',
               },
               {
-                name: `twitter:title`,
                 content: title,
+                name: 'twitter:title',
               },
               {
-                name: `twitter:description`,
                 content: metaDescription,
+                name: 'twitter:description',
               },
             ]
               .concat(
-                keywords.length > 0
+                keywords!.length > 0
                   ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
+                    content: keywords!.join(', '),
+                    name: 'keywords',
+                  }
+                  : [],
               )
-              .concat(meta)}
+              .concat(meta!)}
           />
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
   keywords: [],
-}
+  lang: 'en',
+  meta: [],
+};
 
-export default SEO
+export default SEO;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -92,4 +92,4 @@ const detailsQuery = graphql`
       }
     }
   }
-`
+`;
