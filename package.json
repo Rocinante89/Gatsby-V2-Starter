@@ -10,6 +10,7 @@
     "gatsby-plugin-manifest": "2.0.13",
     "gatsby-plugin-offline": "2.0.21",
     "gatsby-plugin-react-helmet": "3.0.5",
+    "gatsby-plugin-robots-txt": "1.3.0",
     "gatsby-plugin-sharp": "2.0.17",
     "gatsby-plugin-sitemap": "2.0.4",
     "gatsby-plugin-typescript": "2.0.3",
@@ -20,15 +21,23 @@
     "react-helmet": "5.2.0"
   },
   "devDependencies": {
+    "@types/enzyme": "3.1.15",
+    "@types/jest": "23.3.12",
     "@types/react-helmet": "5.0.8",
     "codeclimate-test-reporter": "0.5.1",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
+    "eslint": "5.12.0",
+    "eslint-config-react-app": "3.0.6",
+    "eslint-config-xo-react": "0.17.0",
+    "eslint-plugin-react": "7.12.3",
     "husky": "1.3.1",
     "jest": "23.6.0",
     "lint-staged": "8.1.0",
     "prettier": "1.15.3",
+    "ts-jest": "23.10.5",
     "ts-lint": "4.5.1",
+    "typescript": "3.2.2",
     "xo": "0.23.0"
   },
   "keywords": [
@@ -40,11 +49,12 @@
     "codeclimate": "codeclimate-test-reporter < coverage/lcov.info",
     "develop": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "lint": "npm run lint:ts && npm run lint:md && npm run lint:js && npm run lint:css",
+    "lint": "npm run lint:ts",
     "lint:ts": "tslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
     "lint:js": "xo",
     "start": "npm run develop",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "npm run lint && jest",
+    "test:watch": "jest --watch"
   },
   "husky": {
     "hooks": {
@@ -59,7 +69,36 @@
     "rules": {
       "no-case-declarations": 0,
       "default-case": 0
-    }
+    },
+    "ignore": [
+      "gatsby-config.js"
+    ]
+  },
+  "jest": {
+    "globals": {
+      "__LINK_PREFIX__": "",
+      "__PREFIX_LINKS__": ""
+    },
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/templates/",
+      "/.cache"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ]
   },
   "lint-staged": {
     "*.{ts,tsx}": [
