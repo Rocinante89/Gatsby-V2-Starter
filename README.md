@@ -19,7 +19,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## 🧐 What's inside?
 
--   [ ] Gatsby 2.0
+-   [x] Gatsby 2.0
     -   [ ] sharp
     -   [x] offline support
     -   [ ] google analytics
@@ -35,7 +35,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     -   [x] Code climate config
 -   [x] SEO
     -   [x] [Helmet](https://github.com/nfl/react-helmet)
--   [] [Bulma](https://bulma.io/) for styling
+-   [ ] [Bulma](https://bulma.io/) for styling
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
