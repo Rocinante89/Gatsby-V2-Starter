@@ -51,7 +51,7 @@
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "npm run lint:ts",
     "lint:ts": "tslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
-    "lint:js": "xo",
+    "lint:js": "xo --ignore \"gatsby-config.js\"",
     "start": "npm run develop",
     "test": "npm run lint && jest",
     "test:watch": "jest --watch"
@@ -69,10 +69,7 @@
     "rules": {
       "no-case-declarations": 0,
       "default-case": 0
-    },
-    "ignore": [
-      "gatsby-config.js"
-    ]
+    }
   },
   "jest": {
     "globals": {
@@ -103,10 +100,6 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "tslint --fix",
-      "git add"
-    ],
-    "*.{js,jsx}": [
-      "xo --fix",
       "git add"
     ]
   },
