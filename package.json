@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/react-helmet": "5.0.8",
+    "codeclimate-test-reporter": "0.5.1",
     "husky": "1.3.1",
     "lint-staged": "8.1.0",
     "prettier": "1.15.3",
@@ -33,12 +34,13 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "codeclimate": "codeclimate-test-reporter < coverage/lcov.info",
     "develop": "gatsby develop",
-    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
     "lint": "npm run lint:ts && npm run lint:md && npm run lint:js && npm run lint:css",
     "lint:ts": "tslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
     "lint:js": "xo",
-    "format": "prettier --write \"src/**/*.js\"",
+    "start": "npm run develop",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "husky": {
